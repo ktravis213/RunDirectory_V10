@@ -112,7 +112,7 @@
 ### BEGIN SECTION SETTINGS
 ###############################################################################
 
-ROOT:                        {ROOT}
+ROOT:                        /as/data/geos/ExtData/HEMCO
 Logfile:                     HEMCO.log
 DiagnPrefix:                 HEMCO_diagnostics
 DiagnFreq:                   End
@@ -121,8 +121,8 @@ Separator:                   /
 Unit tolerance:              1
 Negative values:             0
 Only unitless scale factors: false
-Verbose:                     {VERBOSE}
-Warnings:                    {WARNINGS}
+Verbose:                     0
+Warnings:                    1
 
 ### END SECTION SETTINGS ###
 
@@ -201,6 +201,7 @@ Warnings:                    {WARNINGS}
     --> CDF table         :       $ROOT/LIGHTNOX/v2014-07/light_dist.ott2010.dat
 104     SoilNOx           : on    NO 
     --> Use fertilizer NOx:       true
+    --> ScaleField_NO     :       SOILNOX_SCALE
 105     DustDead          : on    DST1/DST2/DST3/DST4 
 106     DustGinoux        : off   DST1/DST2/DST3/DST4
 107     SeaSalt           : on    SALA/SALC/Br2
@@ -214,14 +215,14 @@ Warnings:                    {WARNINGS}
     --> Isoprene scaling  :       1.0 
 109     MEGAN_Mono        : on    CO/OCPI/MONX
 110     MEGAN_SOA         : off   MTPA/MTPO/LIMO/SESQ
-111     GFED              : on    NO/CO/ALK4/ACET/MEK/ALD2/PRPE/C3H8/CH2O/C2H6/SO2/NH3/BCPO/BCPI/OCPO/OCPI/POA1/NAP
+111     GFED              : on    NO/CO/ALK4/ACET/MEK/ALD2/PRPE/C3H8/CH2O/C2H6/HAC/GLYC/MGLY/SO2/NH3/BCPO/BCPI/OCPO/OCPI/POA1/NAP
     --> GFED3             :       false 
     --> GFED4             :       true
     --> GFED_daily        :       false
     --> GFED_3hourly      :       false
-    --> CO scale factor   :       1.05
-    --> POA scale factor  :       1.27
-    --> NAP scale factor  :       2.75e-4
+    --> Scaling_CO        :       1.05
+    --> Scaling_POA       :       1.27
+    --> Scaling_NAP       :       2.75e-4
     --> hydrophilic BC    :       0.2
     --> hydrophilic OC    :       0.5
 114     FINN              : off   NO/CO/ALK4/ACET/MEK/ALD2/PRPE/C3H8/CH2O/C2H6/SO2/NH3/BCPI/BCPO/OCPI/OCPO/GLYC/HAC
@@ -537,8 +538,8 @@ Warnings:                    {WARNINGS}
 #==============================================================================
 (((NEI2011
 # SURFACE INVENTORY
-0 NEI11_SURFACE_NO     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          NO       2006-2013/1-12/1-31/$HH R xy  kg/m2/s  NO   251/1007     1/2 50
-0 NEI11_SURFACE_NO2    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          NO2      2006-2013/1-12/1-31/$HH R xy  kg/m2/s  NO2  251/1007     1/2 50
+0 NEI11_SURFACE_NO     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          NO       2006-2013/1-12/1-31/$HH R xy  kg/m2/s  NO   251/1007/269 1/2 50
+0 NEI11_SURFACE_NO2    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          NO2      2006-2013/1-12/1-31/$HH R xy  kg/m2/s  NO2  251/1007/269 1/2 50
 0 NEI11_SURFACE_HONO   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          HONO     2006-2013/1-12/1-31/$HH R xy  kg/m2/s  HNO2 1007         1/2 50
 0 NEI11_SURFACE_CO     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          CO       2006-2013/1-12/1-31/$HH R xy  kg/m2/s  CO   252/1007     1/2 50
 0 NEI11_SURFACE_NH3    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD.nc          NH3      2006-2013/1-12/1-31/$HH R xy  kg/m2/s  NH3  253/1007     1/2 50
@@ -630,8 +631,8 @@ Warnings:                    {WARNINGS}
 0 NEI11_EGUPK_OCPO     -                                                               -        -                       - -   -        OCPO 257/1007/268 1   50
 
 # OIL & GAS
-0 NEI11_OILGAS_NO      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007     1   50
-0 NEI11_OILGAS_NO2     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007     1   50
+0 NEI11_OILGAS_NO      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007/269 1   50
+0 NEI11_OILGAS_NO2     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007/269 1   50
 0 NEI11_OILGAS_HONO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   HONO     2006-2013/1-12/1-31/$HH R xyz kg/m2/s  HNO2 1007         1   50
 0 NEI11_OILGAS_CO      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   CO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  CO   252/1007     1   50
 0 NEI11_OILGAS_NH3     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_oilgas.nc   NH3      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NH3  253/1007     1   50
@@ -661,8 +662,8 @@ Warnings:                    {WARNINGS}
 0 NEI11_OILGAS_OCPO    -                                                               -        -                       - -   -        OCPO 257/1007/268 1   50
 
 # OTHER POINT SOURCES
-0 NEI11_OTHPT_NO       $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007     1   50
-0 NEI11_OTHPT_NO2      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007     1   50
+0 NEI11_OTHPT_NO       $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007/269 1   50
+0 NEI11_OTHPT_NO2      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007/269 1   50
 0 NEI11_OTHPT_HONO     $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    HONO     2006-2013/1-12/1-31/$HH R xyz kg/m2/s  HNO2 1007         1   50
 0 NEI11_OTHPT_CO       $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    CO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  CO   252/1007     1   50
 0 NEI11_OTHPT_NH3      $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_othpt.nc    NH3      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NH3  253/1007     1   50
@@ -692,8 +693,8 @@ Warnings:                    {WARNINGS}
 0 NEI11_OTHPT_OCPO     -                                                               -        -                       - -   -        OCPO 257/1007/268 1   50
 
 # NON-EGU INDUSTRIAL STACKS
-0 NEI11_PTNONIPM_NO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007     1   50
-0 NEI11_PTNONIPM_NO2   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007     1   50
+0 NEI11_PTNONIPM_NO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc NO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO   251/1007/269 1   50
+0 NEI11_PTNONIPM_NO2   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc NO2      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NO2  251/1007/269 1   50
 0 NEI11_PTNONIPM_HONO  $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc HONO     2006-2013/1-12/1-31/$HH R xyz kg/m2/s  HNO2 1007         1   50
 0 NEI11_PTNONIPM_CO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc CO       2006-2013/1-12/1-31/$HH R xyz kg/m2/s  CO   252/1007     1   50
 0 NEI11_PTNONIPM_NH3   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_ptnonipm.nc NH3      2006-2013/1-12/1-31/$HH R xyz kg/m2/s  NH3  253/1007     1   50
@@ -934,8 +935,8 @@ Warnings:                    {WARNINGS}
 )))EMEP
 
 (((NEI2011_SHIP
-102 NEI11_C3MARINE_NO  $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO     2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO   251/1007 10 50
-102 NEI11_C3MARINE_NO2 $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO2    2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO2  251/1007 10 50
+102 NEI11_C3MARINE_NO  $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO     2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO   251/1007/269 10 50
+102 NEI11_C3MARINE_NO2 $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO2    2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO2  251/1007/269 10 50
 )))NEI2011_SHIP
 
 #------------------------------------------------------------------------------
@@ -953,8 +954,8 @@ Warnings:                    {WARNINGS}
 )))EMEP
 
 (((NEI2011_SHIP
-0 NEI11_C3MARINE_NO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO     2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO   251/1007 10 50
-0 NEI11_C3MARINE_NO2   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO2    2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO2  251/1007 10 50
+0 NEI11_C3MARINE_NO    $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO     2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO   251/1007/269 10 50
+0 NEI11_C3MARINE_NO2   $ROOT/NEI2011/v2015-03/$MM/NEI11_0.1x0.1_2011$MM$DD_c3marine.nc NO2    2006-2013/$MM/$DD/0-23 R xy kg/m2/s  NO2  251/1007/269 10 50
 )))NEI2011_SHIP
 
 ))).not.ParaNOx
@@ -1188,7 +1189,7 @@ Warnings:                    {WARNINGS}
 # Local redistribution factors: These are model-specific and hence need to be 
 # redefined for different model/resolution simulations!!!
 #==============================================================================
-103 LIGHTNOX_OTDLIS $ROOT/LIGHTNOX/v2014-07/OTD-LIS-Local-Redist.CTH.v5.{LNOX}.$RES.nc OTD $YYYY/1-12/1/0 C xy unitless NO - 1 1
+103 LIGHTNOX_OTDLIS $ROOT/LIGHTNOX/v2014-07/OTD-LIS-Local-Redist.CTH.v5.geosfp.$RES.nc OTD $YYYY/1-12/1/0 C xy unitless NO - 1 1
 
 #==============================================================================
 # --- SOILNOX emissions (Extension 104) ---
@@ -1226,7 +1227,7 @@ Warnings:                    {WARNINGS}
 104 SOILNOX_LANDK24 $ROOT/SOILNOX/v2014-07/soilNOx.landtype.generic.025x025.1L.nc LANDFRAC_K24  2000/1/1/0        C xy 1     NO - 1 1
 104 SOILNOX_ARID    $ROOT/SOILNOX/v2014-07/soilNOx.climate.generic.05x05.nc       ARID          2000/1/1/0        C xy 1     NO - 1 1
 104 SOILNOX_NONARID $ROOT/SOILNOX/v2014-07/soilNOx.climate.generic.05x05.nc       NON_ARID      2000/1/1/0        C xy 1     NO - 1 1
-
+104 SOILNOX_SCALE   1.0 - 2000/1/1/0 C xy unitless * 333 1 1
 #==============================================================================
 # --- dust emissions using DEAD model (Extension 105) ---
 #==============================================================================
@@ -1902,7 +1903,7 @@ Warnings:                    {WARNINGS}
 252 NEI11_CO_YRSCALE  1.271/1.227/1.104/0.998/1.019/1.0/0.981/0.962 - 2006-2013/1/1/0 C xy 1 1 
 253 NEI11_NH3_YRSCALE 0.966/1.002/1.019/1.015/1.010/1.0/0.999/0.998 - 2006-2013/1/1/0 C xy 1 1 
 254 NEI11_VOC_YRSCALE 1.083/1.093/1.011/1.000/1.016/1.0/0.986/0.971 - 2006-2013/1/1/0 C xy 1 1 
-255 NEI11_SO2_YRSCALE 2.038/1.813/1.600/1.408/1.200/1.0/0.800/0.738 - 2006-2013/1/1/0 C xy 1 1 
+255 NEI11_SO2_YRSCALE 2.038/1.813/1.600/1.408/1.200/1.0/0.800/0.613 - 2006-2013/1/1/0 C xy 1 1 
 256 NEI11_BC_YRSCALE  1.006/1.034/0.996/0.995/0.993/1.0/0.995/0.991 - 2006-2013/1/1/0 C xy 1 1 
 257 NEI11_OC_YRSCALE  1.006/1.034/0.996/0.995/0.993/1.0/0.995/0.991 - 2006-2013/1/1/0 C xy 1 1 
 260 NEI11_PAR2ACET    0.06                                          - -               - xy 1 1
@@ -1914,6 +1915,10 @@ Warnings:                    {WARNINGS}
 266 NEI11_BC2BCPO     0.8                                           - -               - xy 1 1
 267 NEI11_OC2OCPI     0.5                                           - -               - xy 1 1
 268 NEI11_OC2OCPO     0.5                                           - -               - xy 1 1
+269 NEI11_MORE        0.6                                           - -               - xy 1 1
+
+# Scale factor to scale US soil NOx emissions by a factor of 0.5 in month August-September.
+333 SOILNOX_SCALE 1.0/1.0/1.0/1.0/1.0/1.0/1.0/0.5/0.5/1.0/1.0/1.0 - 2000/1-12/1/0 - xy 1 1 5000
 
 ### END SECTION SCALE FACTORS ###
 
@@ -1934,7 +1939,7 @@ Warnings:                    {WARNINGS}
 1005 USA_MASK    $ROOT/MASKS/v2014-07/usa.mask.nei2005.geos.1x1.nc     MASK     2000/1/1/0 C xy unitless 1 -165/10/-40/90
 1006 ASIA_MASK   $ROOT/MASKS/v2014-07/MIX_Asia_mask.generic.025x025.nc MASK     2000/1/1/0 C xy unitless 1 46/-12/180/82
 1007 NEI11_MASK  $ROOT/MASKS/v2014-07/USA_LANDMASK_NEI2011_0.1x0.1.nc  LANDMASK 2000/1/1/0 C xy 1        1 -140/20/-50/60
-
+5000 SOILNOX_MASK  -106.3/28.0/-93.8/49.0 - - - xy 1 1 -106.3/28.0/-93.8/49.0
 ### END SECTION MASKS ###
 
 ### END OF HEMCO INPUT FILE ###
