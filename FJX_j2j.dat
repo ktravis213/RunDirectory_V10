@@ -90,11 +90,11 @@
   89 VRP       PHOTON    OH HO2 CH2O MCO3 GLYC MGLY        1.000 /CH3OOH/
   90 MRP       PHOTON    OH HO2 HAC CO CH2O                1.000 /CH3OOH/
   91 MAOP      PHOTON    OH CH2O MCO3                      1.000 /CH3OOH/
-  92 MACRN     PHOTON    OH HO2 RCHO                       1.000 /ONIT1 /
-  93 MVKN      PHOTON    OH HO2 RCHO                       1.000 /ONIT1 /   
+  92 MACRN     PHOTON    OH HO2 RCHO                       1.000 /MCRNit/
+  93 MVKN      PHOTON    OH HO2 RCHO                       1.000 /MVKNit/   
   94 ISOPNB    PHOTON    OH HO2 RCHO                       1.000 /ONIT1 /
   95 ISOPND    PHOTON    OH HO2 RCHO                       1.000 /ONIT1 /  
-  96 PROPNN    PHOTON    OH HO2 RCHO                       1.000 /ONIT1 /
+  96 PROPNN    PHOTON    OH HO2 RCHO                       1.000 /ProNit/
   97 ATOOH     PHOTON    OH HO2 RCHO                       1.000 /CH3OOH/
   98 R4N2      PHOTON    NO2 ACET MEK MO2 HO2 ALD2...      1.000 /CH3NO3/
   99 MAP       PHOTON    OH        MO2                     1.000 /CH3OOH/
@@ -105,4 +105,5 @@
  104 MPN       PHOTON    HO2       NO3       HCHO          0.050 /MPN   /
  105 MPN       PHOTON    MO2       NO2                     0.950 /MPN   /
  106 HPALD     PHOTON    OH HO2 GLYC CH2O GLYX MGLY...     1.000 /HPALD /
+ 107 ETHLN     PHOTON    HO2    NO2 CH2O  CO   		   1.000 /EthNit /
 9999
