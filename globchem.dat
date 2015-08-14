@@ -21,6 +21,8 @@
 #     Lee et al., JPC-A (2014). New species is DHDN - a potential 
 #     SOA precursor.
 #         -- change HCOOH to active#
+#    (4) Updated product yields & reaction rate of RIO2 self reaction (Xie et al., ACP, 2013).
+#        -- add 0.29 CO to close the carbon budget (eam)
 #
 #  18 Dec 2014 (v10-01f)
 #  -----------------------
@@ -1210,10 +1212,10 @@ A  478 8.37E-14  0.0E+00      0 0     0.00     0.     0.
 +0.300HC5           +0.240MOH           +0.240ROH           +             
 +                   +                   +                   +             
 +                   +                   +                   +        
-A  478 1.54E-13  0.0E+00      0 0     0.00     0.     0.         
+A  478 2.34E-12  0.0E+00      0 0     0.00     0.     0.         
       RIO2          +     RIO2                                          
-=1.280HO2           +0.920CH2O          +0.560MVK           +0.360MACR    
-+0.480ROH           +0.500HC5           +                   +             
+=0.910HO2           +0.750CH2O          +0.450MVK           +0.290MACR    
++0.090DIBOO         +1.110HC5           +0.290CO            +             
 +                   +                   +                   +             
 +                   +                   +                   +        
 A  479 8.37E-14  0.0E+00      0 0     0.00     0.     0.         
