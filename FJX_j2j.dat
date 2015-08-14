@@ -106,4 +106,8 @@
  105 MPN       PHOTON    MO2       NO2                     0.950 /MPN   /
  106 HPALD     PHOTON    OH HO2 GLYC CH2O GLYX MGLY...     1.000 /HPALD /
  107 ETHLN     PHOTON    HO2    NO2 CH2O  CO   		   1.000 /EthNit /
-9999
+ 108 PIP       PHOTON    OH         HO2        RCHO        1.000 /H2O2 /
+ 109 MONITS    PHOTON    NO2        MEK                    1.000 /ONIT1/
+ 110 MONITU    PHOTON    NO2        RCHO                   1.000 /ONIT1/
+ 111 HONIT     PHOTON    NO2        HKET                   1.000 /ONIT1/
+ 9999                                                       0.00E-00  0.00      0.0   
