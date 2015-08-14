@@ -104,4 +104,5 @@
  103 O3        PHOTON    O2        O(1D)                   1.000 /O3(1D)/
  104 MPN       PHOTON    HO2       NO3       HCHO          0.050 /MPN   /
  105 MPN       PHOTON    MO2       NO2                     0.950 /MPN   /
+ 106 HPALD     PHOTON    OH HO2 GLYC CH2O GLYX MGLY...     1.000 /HPALD /
 9999
