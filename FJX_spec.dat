@@ -1,5 +1,5 @@
 UCI FJX v6.8c JPL10+2013 fixes: Q1d, Acetone! others, derived fort10-2013b.x
-NW-JValues   67   18  NQQQ,NWWW - nominally NJVAL = NQQQ (# Xsects)
+NW-JValues   71   18  NQQQ,NWWW - nominally NJVAL = NQQQ (# Xsects)
 w-eff (nm)      187.      191.      193.      196.      202.      208.
                 211.      214.      261.      267.      277.      295.
                 303.      310.      316.      333.      380.      574.
@@ -402,7 +402,6 @@ MVKNit 298 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
 MCRNit 298 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
            0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 1.328E-19
 	   1.262E-19 1.113E-19 1.010E-19 6.449E-20 0.000E+00 0.000E+00
-
 endofJ
 
 
